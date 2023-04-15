@@ -24,7 +24,7 @@
 
 
 <div class="container">
-  <h2>{name} {#if daysRemaining && percentDifference > 0}<small>{daysRemaining} days remaining</small>{/if}</h2>
+  <h2>{name} {#if daysRemaining > 0 && percentDifference > 0}<small>{percentDifference}% complete, {daysRemaining} days remaining</small>{/if}</h2>
 
   <progress
     id={`progress bar for ${name}`}
