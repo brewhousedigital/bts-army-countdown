@@ -26,11 +26,16 @@
 
 
 <div class="container">
-  <h2>{name} {#if daysRemaining > 0 && percentDifference > 0}<small>{percentDifference}% complete, {daysRemaining} days remaining</small>{/if}</h2>
+  <div class="name">
+    <h2>{name}</h2>
+    {#if daysRemaining > 0 && percentDifference > 0}<small>{daysRemaining} days remaining</small>{/if}
+  </div>
 
 
   <div class="progress-container">
-    <div class="progress-bar" style="background-color: {color}; width: {percentDifference}%"></div>
+    <div class="progress-bar" style="background-color: {color}; width: {percentDifference}%">
+      <span>{percentDifference}%</span>
+    </div>
   </div>
 
 
@@ -49,7 +54,18 @@
     margin-bottom: 45px;
   }
 
-  h2 small {
+  .name {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 13px;
+  }
+
+  .name h2 {
+    margin: 0;
+  }
+
+  .name small {
     font-style: italic;
     font-size: 70%;
   }
@@ -69,9 +85,15 @@
     width: 25%;
   }
 
+  .progress-bar span {
+    font-size: 6px;
+    display: block;
+    padding-left: 7px;
+  }
+
   .icon {
     max-width: 70px;
     position: absolute;
-    top: 25px;
+    top: 20px;
   }
 </style>
