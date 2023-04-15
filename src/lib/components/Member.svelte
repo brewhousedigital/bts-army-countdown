@@ -21,6 +21,7 @@
   if(isNaN(percentDifference)) percentDifference = 0
   if(percentDifference >= 100) percentDifference = 100;
 
+  console.log(">>>percentDifference", percentDifference)
   let daysRemaining = totalDaysRequired - daysCurrentlyServed;
 </script>
 
@@ -44,9 +45,17 @@
   </div>
 
 
-  <div class="progress-container">
-    <div class="progress-bar" style="background-color: {color}; width: {percentDifference}%"></div>
-  </div>
+  {#if percentDifference > 0}
+    <div class="progress-container">
+      <div class="progress-bar" style="background-color: {color}; width: {percentDifference}%"></div>
+    </div>
+  {:else}
+    <div class="progress-container">
+      <div class="progress-bar" style="background-color: {color};"></div>
+    </div>
+  {/if}
+
+
 
   {#if percentDifference > 0 && percentDifference < 100}
     <img
@@ -123,7 +132,7 @@
 
   .progress-bar {
     height: 8px;
-    width: 25%;
+    width: 0;
   }
 
   .progress-bar span {
@@ -135,7 +144,7 @@
   .icon {
     max-width: 70px;
     position: absolute;
-    top: 20px;
+    top: 18px;
   }
 
   .icon.start {
