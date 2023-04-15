@@ -62,7 +62,7 @@
       src={`/images/${icon}.png`}
       alt=""
       class="icon"
-      style="left: calc({percentDifference}% - 35px)" />
+      style="left: calc({percentDifference}% - 37px)" />
   {/if}
 
   {#if percentDifference <= 0}
@@ -144,7 +144,7 @@
   .icon {
     max-width: 70px;
     position: absolute;
-    top: 18px;
+    top: 17px;
   }
 
   .icon.start {
