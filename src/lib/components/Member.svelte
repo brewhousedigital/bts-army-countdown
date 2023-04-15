@@ -4,6 +4,8 @@
   export let name = "";
   export let start = "";
   export let end = "";
+  export let color = "";
+  export let icon = "";
 
   const currentDate = dayjs();
   const startDate = dayjs(start);
@@ -26,12 +28,17 @@
 <div class="container">
   <h2>{name} {#if daysRemaining > 0 && percentDifference > 0}<small>{percentDifference}% complete, {daysRemaining} days remaining</small>{/if}</h2>
 
-  <progress
-    id={`progress bar for ${name}`}
-    max="100"
-    value={percentDifference}>{percentDifference}%</progress>
 
-  <div></div>
+  <div class="progress-container">
+    <div class="progress-bar" style="background-color: {color}; width: {percentDifference}%"></div>
+  </div>
+
+
+  <img
+    src={`/images/${icon}.png`}
+    alt=""
+    class="icon"
+    style="left: calc({percentDifference}% - 35px)" />
 </div>
 
 
@@ -44,14 +51,27 @@
 
   h2 small {
     font-style: italic;
-    font-size: 60;
+    font-size: 70%;
   }
 
   progress {
     width: 100%;
   }
 
-  progress::-moz-progress-bar { background: blue; }
-  progress::-webkit-progress-value { background: blue; }
-  progress { color: blue; }
+  .progress-container {
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 8px;
+    width: 25%;
+  }
+
+  .icon {
+    max-width: 70px;
+    position: absolute;
+    top: 25px;
+  }
 </style>
