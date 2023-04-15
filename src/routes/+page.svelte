@@ -27,5 +27,6 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow: hidden;
   }
 </style>
