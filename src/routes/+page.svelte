@@ -16,9 +16,13 @@
 <div class="container">
   <h1>Patiently Waiting</h1>
 
-  {#each timeline as time}
-    <Member name={time.name} start={time.start} end={time.end} color={time.color} icon={time.icon} />
-  {/each}
+  <div class="chart">
+    {#each timeline as time}
+      <Member name={time.name} start={time.start} end={time.end} color={time.color} icon={time.icon} />
+    {/each}
+  </div>
+
+  <p style="text-align: center;">🏴‍☠️ Made for the Arrchive 🏴‍☠️</p>
 </div>
 
 
@@ -28,5 +32,9 @@
     margin: 0 auto;
     padding: 0 20px;
     overflow: hidden;
+  }
+
+  .chart {
+    margin-bottom: 100px;
   }
 </style>
