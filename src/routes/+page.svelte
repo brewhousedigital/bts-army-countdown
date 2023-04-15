@@ -12,6 +12,24 @@
   ]
 </script>
 
+<svelte:head>
+  <title>BTS Returns! Tracker</title>
+  <meta name="description" content="Keep track of each member of BTS and how long their deployment will be!">
+
+  <meta property="og:url" content="https://bts-countdown.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BTS Returns! Tracker">
+  <meta property="og:description" content="Keep track of each member of BTS and how long their deployment will be!">
+  <meta property="og:image" content="https://bts-countdown.netlify.app/opengraph.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="bts-countdown.netlify.app">
+  <meta property="twitter:url" content="https://bts-countdown.netlify.app/">
+  <meta name="twitter:title" content="BTS Returns! Tracker">
+  <meta name="twitter:description" content="Keep track of each member of BTS and how long their deployment will be!">
+  <meta name="twitter:image" content="https://bts-countdown.netlify.app/opengraph.png">
+</svelte:head>
+
 
 <div class="container">
   <h1>Patiently Waiting</h1>
