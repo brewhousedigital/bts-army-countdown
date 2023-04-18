@@ -18,7 +18,7 @@
   let daysCurrentlyServed = currentDate.diff(startDate, "day")
   if(isNaN(daysCurrentlyServed)) daysCurrentlyServed = 0
 
-  let percentDifference = Math.ceil((daysCurrentlyServed / totalDaysRequired) * 100)
+  let percentDifference = parseFloat(((daysCurrentlyServed / totalDaysRequired) * 100).toFixed(1))
   if(isNaN(percentDifference)) percentDifference = 0
   if(percentDifference >= 100) percentDifference = 100;
 
