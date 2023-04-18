@@ -7,9 +7,10 @@
   export let color = "";
   export let icon = "";
 
-  const currentDate = dayjs();
-  const startDate = dayjs(start);
-  const endDate = dayjs(end);
+  let currentDate = dayjs();
+  // The start date needs to have 1 removed or the person starting will never cross 1% on the chart
+  let startDate = dayjs(start).subtract(1, 'day');
+  let endDate = dayjs(end);
 
   let totalDaysRequired = endDate.diff(startDate, "day")
   if(isNaN(totalDaysRequired)) totalDaysRequired = 0
@@ -17,11 +18,10 @@
   let daysCurrentlyServed = currentDate.diff(startDate, "day")
   if(isNaN(daysCurrentlyServed)) daysCurrentlyServed = 0
 
-  let percentDifference = Math.floor((daysCurrentlyServed / totalDaysRequired) * 100)
+  let percentDifference = Math.ceil((daysCurrentlyServed / totalDaysRequired) * 100)
   if(isNaN(percentDifference)) percentDifference = 0
   if(percentDifference >= 100) percentDifference = 100;
 
-  console.log(">>>percentDifference", percentDifference)
   let daysRemaining = totalDaysRequired - daysCurrentlyServed;
 </script>
 
