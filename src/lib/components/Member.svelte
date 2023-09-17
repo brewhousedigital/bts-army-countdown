@@ -12,6 +12,12 @@
   let startDate = dayjs(start).subtract(1, 'day');
   let endDate = dayjs(end);
 
+  // Check if the date was added, but they haven't started yet
+  let notStartedYetButWillSoon = false;
+  if(startDate.isAfter(currentDate)) {
+    notStartedYetButWillSoon = true;
+  }
+
   let totalDaysRequired = endDate.diff(startDate, "day")
   if(isNaN(totalDaysRequired)) totalDaysRequired = 0
 
@@ -30,11 +36,16 @@
 <div class="container">
   <div class="name {daysRemaining === 0 && percentDifference === 100 ? 'done' : ''}">
     <h2 style="color: {color}">{name}</h2>
+    
     {#if daysRemaining > 0 && percentDifference > 0}
       <div class="time-remaining">
         <div>{percentDifference}% complete</div>
         <div>{daysRemaining} day{daysRemaining > 1 ? 's' : ''} remaining</div>
       </div>
+    {/if}
+
+    {#if notStartedYetButWillSoon}
+      <div class="time-remaining">Preparing to enlist</div>
     {/if}
 
     {#if daysRemaining === 0 && percentDifference === 100}
