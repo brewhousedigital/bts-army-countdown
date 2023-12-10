@@ -14,7 +14,7 @@
 
   // Check if the date was added, but they haven't started yet
   let notStartedYetButWillSoon = false;
-  if(startDate.isAfter(currentDate)) {
+  if(startDate === currentDate || startDate.isAfter(currentDate)) {
     notStartedYetButWillSoon = true;
   }
 
