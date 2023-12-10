@@ -4,11 +4,11 @@
   const timeline = [
     {name: "Jin", start: "12/13/2022", end: "6/13/2024", color: "#e498d7", icon: "icon-jin"},
     {name: "Hobi", start: "04/18/2023", end: "10/18/2024", color: "#61c97f", icon: "icon-hobi"},
-    {name: "Yoongi", start: "09/22/2023", end: "06/21/2025", color: "#b8eed4", icon: "icon-yoongi"},
-    {name: "Namjoon", start: "", end: "", color: "#ac6fcd", icon: "icon-namjoon"},
-    {name: "Jimin", start: "", end: "", color: "#5ad7fa", icon: "icon-jimin"},
-    {name: "Taehyung", start: "", end: "", color: "#f4a945", icon: "icon-taehyung"},
-    {name: "Jungkook", start: "", end: "", color: "#c74641", icon: "icon-jungkook"},
+    {name: "Yoongi", start: "09/22/2023", end: "06/22/2025", color: "#b8eed4", icon: "icon-yoongi"},
+    {name: "Namjoon", start: "12/11/2023", end: "06/11/2025", color: "#ac6fcd", icon: "icon-namjoon"},
+    {name: "Taehyung", start: "12/11/2023", end: "06/11/2025", color: "#f4a945", icon: "icon-taehyung"},
+    {name: "Jimin", start: "12/12/2023", end: "06/12/2025", color: "#5ad7fa", icon: "icon-jimin"},
+    {name: "Jungkook", start: "12/12/2023", end: "06/12/2025", color: "#c74641", icon: "icon-jungkook"},
   ]
 </script>
 
