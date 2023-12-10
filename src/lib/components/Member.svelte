@@ -1,5 +1,7 @@
 <script>
   import dayjs from "dayjs";
+  import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
+  dayjs.extend(isSameOrAfter)
 
   export let name = "";
   export let start = "";
@@ -14,7 +16,7 @@
 
   // Check if the date was added, but they haven't started yet
   let notStartedYetButWillSoon = false;
-  if(startDate === currentDate || startDate.isAfter(currentDate)) {
+  if(startDate.isSameOrAfter(currentDate, 'day')) {
     notStartedYetButWillSoon = true;
   }
 
