@@ -2,7 +2,7 @@
   import Member from "$lib/components/Member.svelte";
 
   const timeline = [
-    {name: "Jin", start: "12/13/2022", end: "6/13/2024", color: "#e498d7", icon: "icon-jin"},
+    {name: "Jin", start: "12/13/2022", end: "6/11/2024", color: "#e498d7", icon: "icon-jin"},
     {name: "Hobi", start: "04/18/2023", end: "10/18/2024", color: "#61c97f", icon: "icon-hobi"},
     {name: "Yoongi", start: "09/22/2023", end: "06/22/2025", color: "#b8eed4", icon: "icon-yoongi"},
     {name: "Namjoon", start: "12/11/2023", end: "06/11/2025", color: "#ac6fcd", icon: "icon-namjoon"},
